@@ -1,0 +1,28 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=AD2CheckWSw3018x1
+*Date=11:14:44
+*CreatedBy=Fritzing 0.8.3b.07.27.048f
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;THT;10.7597;-21.5787;-90;Bottom;W1
+2;;THT;36.1597;-21.5787;-90;Bottom;V+
+3;;THT;10.7597;-16.4987;-90;Bottom;Jump
+4;;;17.5245;-16.1737;0;Bottom;TXT1
+5;;;28.3577;-16.3195;0;Bottom;TXT1
+6;;THT;23.4597;-11.4187;90;Bottom;D7
+7;;THT;23.4597;-8.87869;90;Bottom;1-
+8;;;39.0351;-23.8791;0;Bottom;TXT1
+9;;;8.63018;-23.8365;0;Bottom;TXT1
+10;;;33.9105;-23.6654;0;Bottom;TXT1
+11;;;13.8428;-23.9217;0;Bottom;TXT1
+12;;;3.13968;-19.0387;0;Bottom;Via1
+13;;THT;36.1597;-16.4987;-90;Bottom;Jump
