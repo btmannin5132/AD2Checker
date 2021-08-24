@@ -76,7 +76,7 @@ def supplyCheck():
         dwf.FDwfAnalogIOEnableSet(hdwf, c_int(True))
 
         #Let supply stabilize
-        time.sleep(1)
+        time.sleep(.25)
         Vp = 0
        # Vn = 0
         for i in range(0, sample):
@@ -120,6 +120,7 @@ def supplyCheck():
         dwf.FDwfAnalogIOEnableSet(hdwf, c_int(True))
 
         #Let supply stabilize
+        #reduced for processing time
         time.sleep(.25)
         Vn = 0
        # Vn = 0
