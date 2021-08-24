@@ -59,7 +59,7 @@ def supplyCheck():
     dwf.FDwfAnalogInConfigure(hdwf, c_bool(False), c_bool(False))
 
     dwf.FDwfAnalogInStatus(hdwf, False, None) 
-    sample = 10
+    sample = 5
 
     print("Checking Positive Supply, please switch ch 2+ to V+")
     input("Press enter when ready")
@@ -120,7 +120,7 @@ def supplyCheck():
         dwf.FDwfAnalogIOEnableSet(hdwf, c_int(True))
 
         #Let supply stabilize
-        time.sleep(1)
+        time.sleep(.25)
         Vn = 0
        # Vn = 0
         for i in range(0, sample):
