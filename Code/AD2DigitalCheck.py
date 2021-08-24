@@ -62,7 +62,7 @@ def digCheck():
     #Test1
     #all 1
     dwf.FDwfDigitalIOOutputSet(hdwf, c_int(0x00FF)) 
-    time.sleep(1)
+    time.sleep(.25)
     dwf.FDwfDigitalIOStatus (hdwf) 
     # read state of all pins, regardless of output enable
     dwf.FDwfDigitalIOInputStatus(hdwf, byref(dwRead)) 
@@ -79,7 +79,7 @@ def digCheck():
     #Test2
     #alternate
     dwf.FDwfDigitalIOOutputSet(hdwf, c_int(0x0055)) 
-    time.sleep(1)
+    time.sleep(.25)
     dwf.FDwfDigitalIOStatus (hdwf) 
     # read state of all pins, regardless of output enable
     dwf.FDwfDigitalIOInputStatus(hdwf, byref(dwRead)) 
@@ -95,7 +95,7 @@ def digCheck():
     #Test3
     #reverse alternate
     dwf.FDwfDigitalIOOutputSet(hdwf, c_int(0x00aa)) 
-    time.sleep(1)
+    time.sleep(.25)
     dwf.FDwfDigitalIOStatus (hdwf) 
     # read state of all pins, regardless of output enable
     dwf.FDwfDigitalIOInputStatus(hdwf, byref(dwRead)) 
@@ -111,7 +111,7 @@ def digCheck():
     #Test4
     #All 0
     dwf.FDwfDigitalIOOutputSet(hdwf, c_int(0x0000)) 
-    time.sleep(1)
+    time.sleep(.25)
     dwf.FDwfDigitalIOStatus (hdwf) 
     # read state of all pins, regardless of output enable
     dwf.FDwfDigitalIOInputStatus(hdwf, byref(dwRead)) 
@@ -130,7 +130,7 @@ def digCheck():
     #Test5
     #all 1
     dwf.FDwfDigitalIOOutputSet(hdwf, c_int(0xFF00)) 
-    time.sleep(1)
+    time.sleep(.25)
     dwf.FDwfDigitalIOStatus (hdwf) 
     # read state of all pins, regardless of output enable
     dwf.FDwfDigitalIOInputStatus(hdwf, byref(dwRead)) 
@@ -147,7 +147,7 @@ def digCheck():
     #Test6
     #alternate
     dwf.FDwfDigitalIOOutputSet(hdwf, c_int(0x5500)) 
-    time.sleep(1)
+    time.sleep(.25)
     dwf.FDwfDigitalIOStatus (hdwf) 
     # read state of all pins, regardless of output enable
     dwf.FDwfDigitalIOInputStatus(hdwf, byref(dwRead)) 
@@ -163,7 +163,7 @@ def digCheck():
     #Test7
     #reverse alternate
     dwf.FDwfDigitalIOOutputSet(hdwf, c_int(0xaa00)) 
-    time.sleep(1)
+    time.sleep(.25)
     dwf.FDwfDigitalIOStatus (hdwf) 
     # read state of all pins, regardless of output enable
     dwf.FDwfDigitalIOInputStatus(hdwf, byref(dwRead)) 
@@ -179,7 +179,7 @@ def digCheck():
     #Test8
     #All 0
     dwf.FDwfDigitalIOOutputSet(hdwf, c_int(0x0000)) 
-    time.sleep(1)
+    time.sleep(.25)
     dwf.FDwfDigitalIOStatus (hdwf) 
     # read state of all pins, regardless of output enable
     dwf.FDwfDigitalIOInputStatus(hdwf, byref(dwRead)) 
