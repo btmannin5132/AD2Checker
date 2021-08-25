@@ -59,7 +59,7 @@ def supplyCheck():
     dwf.FDwfAnalogInConfigure(hdwf, c_bool(False), c_bool(False))
 
     dwf.FDwfAnalogInStatus(hdwf, False, None) 
-    sample = 5
+    sample = .1
 
     print("Checking Positive Supply, please switch ch 2+ to V+")
     input("Press enter when ready")
@@ -94,7 +94,7 @@ def supplyCheck():
             
             vpError = abs((abs(VpAvg)-x)/x)*100
             print('Expected + Supply: {0:.4f} V || Measured + Supply: {1:.4f} V || Error: {2:.4f} %'.format(x,VpAvg,vpError))
-            if vpError < 3:
+            if vpError < .1:
                 print("Ok")
             else:
                 print("Check Supply")
@@ -137,7 +137,7 @@ def supplyCheck():
         else:
             vnError = abs(((abs(VnAvg)-x)/x)*100)
             print('Expected - Supply: {0:.4f} V || Measured - Supply: {1:.4f} V || Error: {2:.4f} %'.format(x*-1,VnAvg,vnError))
-            if vnError < 3:
+            if vnError < .1:
                 print("Ok")
             else:
                 print("Check Supply")

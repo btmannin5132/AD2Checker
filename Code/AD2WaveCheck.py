@@ -52,7 +52,7 @@ def waveCheck(ch):
     dwf.FDwfAnalogIOChannelNodeSet(hdwf, c_int(ch), c_int(1), c_double(0.0)) 
     dwf.FDwfAnalogIOEnableSet(hdwf, c_int(True))
 
-    time.sleep(1)
+    time.sleep(.1)
 
     print("Configure and start first analog out channel")
     dwf.FDwfAnalogOutEnableSet(hdwf, c_int(ch), c_int(1))
@@ -64,7 +64,7 @@ def waveCheck(ch):
     dwf.FDwfAnalogInFrequencySet(hdwf, c_double(1000000))
     print("Set range for all channels")
     dwf.FDwfAnalogInChannelRangeSet(hdwf, c_int(-1), c_double(4))
-    dwf.FDwfAnalogInBufferSizeSet(hdwf, c_int(5000))
+    dwf.FDwfAnalogInBufferSizeSet(hdwf, c_int(2500))
 
     print("")
 
@@ -84,7 +84,7 @@ def waveCheck(ch):
         time.sleep(0.1)
     #print("   done")
 
-    rg = (c_double*5000)()
+    rg = (c_double*2500)()
     dwf.FDwfAnalogInStatusData(hdwf, c_int(0), rg, len(rg)) # get channel 1 data
     #dwf.FDwfAnalogInStatusData(hdwf, c_int(1), rg, len(rg)) # get channel 2 data
 
@@ -117,10 +117,10 @@ def waveCheck(ch):
     dwf.FDwfAnalogInFrequencySet(hdwf, c_double(1000000))
     #print("Set range for all channels")
     dwf.FDwfAnalogInChannelRangeSet(hdwf, c_int(-1), c_double(4))
-    dwf.FDwfAnalogInBufferSizeSet(hdwf, c_int(5000))
+    dwf.FDwfAnalogInBufferSizeSet(hdwf, c_int(2500))
 
     #print("Wait after first device opening the analog in offset to stabilize")
-    time.sleep(1)
+    time.sleep(.1)
 
     print("Starting Square acquisition...")
     dwf.FDwfAnalogInConfigure(hdwf, c_int(1), c_int(1))
@@ -135,7 +135,7 @@ def waveCheck(ch):
         time.sleep(0.1)
     #print("   done")
 
-    rg = (c_double*5000)()
+    rg = (c_double*2500)()
     dwf.FDwfAnalogInStatusData(hdwf, c_int(0), rg, len(rg)) # get channel 1 data
     #dwf.FDwfAnalogInStatusData(hdwf, c_int(1), rg, len(rg)) # get channel 2 data
 
@@ -167,10 +167,10 @@ def waveCheck(ch):
     dwf.FDwfAnalogInFrequencySet(hdwf, c_double(1000000))
     #print("Set range for all channels")
     dwf.FDwfAnalogInChannelRangeSet(hdwf, c_int(-1), c_double(4))
-    dwf.FDwfAnalogInBufferSizeSet(hdwf, c_int(5000))
+    dwf.FDwfAnalogInBufferSizeSet(hdwf, c_int(2500))
 
     #print("Wait after first device opening the analog in offset to stabilize")
-    time.sleep(1)
+    time.sleep(.1)
 
     print("Starting Triangle acquisition...")
     dwf.FDwfAnalogInConfigure(hdwf, c_int(1), c_int(1))
@@ -185,7 +185,7 @@ def waveCheck(ch):
         time.sleep(0.1)
     #print("   done")
 
-    rg = (c_double*5000)()
+    rg = (c_double*2500)()
     dwf.FDwfAnalogInStatusData(hdwf, c_int(0), rg, len(rg)) # get channel 1 data
     #dwf.FDwfAnalogInStatusData(hdwf, c_int(1), rg, len(rg)) # get channel 2 data
 
